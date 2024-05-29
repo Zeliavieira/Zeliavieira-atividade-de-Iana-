@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adições para Crianças</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        .addition {
+            background: #fff;
+            padding: 20px;
+            margin: 20px auto;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        .numbers {
+            font-size: 16px;
+        }
+        .numbers span {
+            display: inline-block;
+            position: relative;
+        }
+        .numbers span .number-label {
+            position: absolute;
+            bottom: -25px;
+            width: 80%;
+            text-align: center;
+            font-size: 0.5em;
+        }
+        .input-container {
+            margin-top: 40px;
+        }
+        input, button {
+            font-size: 1em;
+            padding: 10px;
+            border-radius: 4px;
+        }
+        input {
+            border: 1px solid #ccc;
+            width: 150px;
+        }
+        button {
+            margin-left: 10px;
+            border: none;
+            background-color: #28a745;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .feedback {
+            display: block;
+            margin-top: 10px;
+            font-size: 1em;
+        }
+        .feedback.correct {
+            color: #28a745;
+        }
+        .feedback.incorrect {
+            color: #dc3545;
+        }
+    </style>
+</head>
+<body>
+    <h1>Adições para Crianças</h1>
+    <div class="addition" data-answer="3">
+        <div class="numbers">
+            <span class="number">
+                🔴🔴
+                <div class="number-label">2</div>
+            </span>
+            <span>+</span>
+            <span class="number">
+                🟩
+                <div class="number-label">1</div>
+            </span>
+        </div>
+        <div class="input-container">
+            <input type="text" placeholder="Resposta">
+            <button>Verificar</button>
+            <span class="feedback"></span>
+        </div>
+    </div>
+    <div class="addition" data-answer="6">
+        <div class="numbers">
+            <span class="number">
+                🔴🔴
+                <div class="number-label">2</div>
+            </span>
+            <span>+</span>
+            <span class="number">
+                🔵🔵🔵🔵
+                <div class="number-label">4</div>
+            </span>
+        </div>
+        <div class="input-container">
+            <input type="text" placeholder="Resposta">
+            <button>Verificar</button>
+            <span class="feedback"></span>
+        </div>
+    </div>
+    <div class="addition" data-answer="4">
+        <div class="numbers">
+            <span class="number">
+                🟡🟡🟡
+                <div class="number-label">3</div>
+            </span>
+            <span>+</span>
+            <span class="number">
+                🔵
+                <div class="number-label">1</div>
+            </span>
+        </div>
+        <div class="input-container">
+            <input type="text" placeholder="Resposta">
+            <button>Verificar</button>
+            <span class="feedback"></span>
+        </div>
+    </div>
+    <div class="addition" data-answer="6">
+        <div class="numbers">
+            <span class="number">
+                🟢🟢🟢🟢
+                <div class="number-label">4</div>
+            </span>
+            <span>+</span>
+            <span class="number">
+                🟡🟡
+                <div class="number-label">2</div>
+            </span>
+        </div>
+        <div class="input-container">
+            <input type="text" placeholder="Resposta">
+            <button>Verificar</button>
+            <span class="feedback"></span>
+        </div>
+    </div>
+    <div class="addition" data-answer="5">
+        <div class="numbers">
+            <span class="number">
+                🟣🟣🟣
+                <div class="number-label">3</div>
+            </span>
+            <span>+</span>
+            <span class="number">
+                🔴🔴
+                <div class="number-label">2</div>
+            </span>
+        </div>
+        <div class="input-container">
+            <input type="text" placeholder="Resposta">
+            <button>Verificar</button>
+            <span class="feedback"></span>
+        </div>
+    </div>
+
+    <!-- Mais 5 Questões -->
+    <div class="addition" data-answer="7">
+        <div class="numbers">
+            <span class="number">
+                🟠🟠🟠
+                <div class="number-label">3</div>
+            </span>
+            <span>+</span>
+            <span class="number">
+                🟦🟦🟦🟦
+                <div class="number-label">4</div>
+            </span>
+        </div>
+        <div class="input-container">
+            <input type="text" placeholder="Resposta">
+            <button>Verificar</button>
+            <span class="feedback"></span>
+        </div>
+    </div>
+    <div class="addition" data-answer="8">
+        <div class="numbers">
+            <span class="number">
+                🟪🟪🟪🟪
+                <div class="number-label">4</div>
+            </span>
+            <span>+</span>
+            <span class="number">
+                🟩🟩🟩🟩
+                <div class="number-label">4</div>
+            </span>
+        </div>
+        <div class="input-container">
+            <input type="text" placeholder="Resposta">
+            <button>Verificar</button>
+            <span class="feedback"></span>
+        </div>
+    </div>
+    <div class="addition" data-answer="5">
+        <div class="numbers">
+            <span class="number">
+                🟥🟥
+                <div class="number-label">2</div>
+            </span>
+            <span>+</span>
+            <span class="number">
+                🟦🟦🟦
+                <div class="number-label">3</div>
+            </span>
+        </div>
+        <div class="input-container">
+            <input type="text" placeholder="Resposta">
+            <button>Verificar</button>
+            <span class="feedback"></span>
+        </div>
+    </div>
+    <div class="addition" data-answer="9">
+        <div class="numbers">
+            <span class="number">
+                🟫🟫🟫🟫🟫
+                <div class="number-label">5</div>
+            </span>
+            <span>+</span>
+            <span class="number">
+                🟪🟪🟪🟪
+                <div class="number-label">4</div>
+            </span>
+        </div>
+        <div class="input-container">
+            <input type="text" placeholder="Resposta">
+            <button>Verificar</button>
+            <span class="feedback"></span>
+        </div>
+    </div>
+    <div class="addition" data-answer="10">
+        <div class="numbers">
+            <span class="number">
+                🟠🟠🟠🟠🟠
+                <div class="number-label">5</div>
+            </span>
+            <span>+</span>
+            <span class="number">
+                🟦🟦🟦🟦🟦
+                <div class="number-label">5</div>
+            </span>
+        </div>
+        <div class="input-container">
+            <input type="text" placeholder="Resposta">
+            <button>Verificar</button>
+            <span class="feedback"></span>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.addition').forEach(function(addition) {
+            const button = addition.querySelector('button');
+            const input = addition.querySelector('input');
+            const feedback = addition.querySelector('.feedback');
+            const correctAnswer = addition.getAttribute('data-answer');
+
+            button.addEventListener('click', function() {
+                const userAnswer = input.value.trim();
+                if (userAnswer === correctAnswer) {
+                    feedback.textContent = "Correto!";
+                    feedback.classList.remove('incorrect');
+                    feedback.classList.add('correct');
+                } else {
+                    feedback.textContent = "Errado, tente novamente.";
+                    feedback.classList.remove('correct');
+                    feedback.classList.add('incorrect');
+                }
+            });
+        });
+    </script>
+ 
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        .subtraction {
+            background: #fff;
+            padding: 20px;
+            margin: 20px auto;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        .numbers {
+            font-size: 16px;
+        }
+        .numbers span {
+            display: inline-block;
+            position: relative;
+        }
+        .numbers span .number-label {
+            position: absolute;
+            bottom: -25px;
+            width: 80%;
+            text-align: center;
+            font-size: 0.5em;
+        }
+        .input-container {
+            margin-top: 40px;
+        }
+        input, button {
+            font-size: 1em;
+            padding: 10px;
+            border-radius: 4px;
+        }
+        input {
+            border: 1px solid #ccc;
+            width: 150px;
+        }
+        button {
+            margin-left: 10px;
+            border: none;
+            background-color: #28a745;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .feedback {
+            display: block;
+            margin-top: 10px;
+            font-size: 1em;
+        }
+        .feedback.correct {
+            color: #28a745;
+        }
+        .feedback.incorrect {
+            color: #dc3545;
+        }
+    </style>
+</head>
+<body>
+    <h1>Subtrações para Crianças</h1>
+    <div class="subtraction" data-answer="1">
+        <div class="numbers">
+            <span class="number">
+                🔴🔴
+                <div class="number-label">2</div>
+            </span>
+            <span>-</span>
+            <span class="number">
+                🔴
+                <div class="number-label">1</div>
+            </span>
+        </div>
+        <div class="input-container">
+            <input type="text" placeholder="Resposta">
+            <button>Verificar</button>
+            <span class="feedback"></span>
+        </div>
+    </div>
+    <div class="subtraction" data-answer="3">
+        <div class="numbers">
+            <span class="number">
+                🔵🔵🔵🔵🔵
+                <div class="number-label">5</div>
+            </span>
+            <span>-</span>
+            <span class="number">
+                🔵🔵
+                <div class="number-label">2</div>
+            </span>
+        </div>
+        <div class="input-container">
+            <input type="text" placeholder="Resposta">
+            <button>Verificar</button>
+            <span class="feedback"></span>
+        </div>
+    </div>
+    <div class="subtraction" data-answer="2">
+        <div class="numbers">
+            <span class="number">
+                🟡🟡🟡
+                <div class="number-label">3</div>
+            </span>
+            <span>-</span>
+            <span class="number">
+                🟡
+                <div class="number-label">1</div>
+            </span>
+        </div>
+        <div class="input-container">
+            <input type="text" placeholder="Resposta">
+            <button>Verificar</button>
+            <span class="feedback"></span>
+        </div>
+    </div>
+    <div class="subtraction" data-answer="1">
+        <div class="numbers">
+            <span class="number">
+                🟢🟢
+                <div class="number-label">2</div>
+            </span>
+            <span>-</span>
+            <span class="number">
+                🟢
+                <div class="number-label">1</div>
+            </span>
+        </div>
+        <div class="input-container">
+            <input type="text" placeholder="Resposta">
+            <button>Verificar</button>
+            <span class="feedback"></span>
+        </div>
+    </div>
+    <div class="subtraction" data-answer="4">
+        <div class="numbers">
+            <span class="number">
+                🟣🟣🟣🟣🟣
+                <div class="number-label">5</div>
+            </span>
+            <span>-</span>
+            <span class="number">
+                🟣
+                <div class="number-label">1</div>
+            </span>
+        </div>
+        <div class="input-container">
+            <input type="text" placeholder="Resposta">
+            <button>Verificar</button>
+            <span class="feedback"></span>
+        </div>
+    </div>
+
+    <!-- Mais 5 Questões -->
+    <div class="subtraction" data-answer="3">
+        <div class="numbers">
+            <span class="number">
+                🟠🟠🟠🟠🟠🟠
+                <div class="number-label">6</div>
+            </span>
+            <span>-</span>
+            <span class="number">
+                🟠🟠🟠
+                <div class="number-label">3</div>
+            </span>
+        </div>
+        <div class="input-container">
+            <input type="text" placeholder="Resposta">
+            <button>Verificar</button>
+            <span class="feedback"></span>
+        </div>
+    </div>
+    <div class="subtraction" data-answer="2">
+        <div class="numbers">
+            <span class="number">
+                🟪🟪🟪🟪
+                <div class="number-label">4</div>
+            </span>
+            <span>-</span>
+            <span class="number">
+                🟪🟪
+                <div class="number-label">2</div>
+            </span>
+        </div>
+        <div class="input-container">
+            <input type="text" placeholder="Resposta">
+            <button>Verificar</button>
+            <span class="feedback"></span>
+        </div>
+    </div>
+    <div class="subtraction" data-answer="1">
+        <div class="numbers">
+            <span class="number">
+                🟥🟥
+                <div class="number-label">2</div>
+            </span>
+            <span>-</span>
+            <span class="number">
+                🟥
+                <div class="number-label">1</div>
+            </span>
+        </div>
+        <div class="input-container">
+            <input type="text" placeholder="Resposta">
+            <button>Verificar</button>
+            <span class="feedback"></span>
+        </div>
+    </div>
+    <div class="subtraction" data-answer="4">
+        <div class="numbers">
+            <span class="number">
+                🟫🟫🟫🟫🟫
+                <div class="number-label">5</div>
+            </span>
+            <span>-</span>
+            <span class="number">
+                🟫
+                <div class="number-label">1</div>
+            </span>
+        </div>
+        <div class="input-container">
+            <input type="text" placeholder="Resposta">
+            <button>Verificar</button>
+            <span class="feedback"></span>
+        </div>
+    </div>
+    <div class="subtraction" data-answer="7">
+        <div class="numbers">
+            <span class="number">
+                🟠🟠🟠🟠🟠🟠🟠🟠
+                <div class="number-label">8</div>
+            </span>
+            <span>-</span>
+            <span class="number">
+                🟠
+                <div class="number-label">1</div>
+            </span>
+        </div>
+        <div class="input-container">
+            <input type="text" placeholder="Resposta">
+            <button>Verificar</button>
+            <span class="feedback"></span>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.subtraction').forEach(function(subtraction) {
+            const button = subtraction.querySelector('button');
+            const input = subtraction.querySelector('input');
+            const feedback = subtraction.querySelector('.feedback');
+            const correctAnswer = subtraction.getAttribute('data-answer');
+
+            button.addEventListener('click', function() {
+                const userAnswer = input.value.trim();
+                if (userAnswer === correctAnswer) {
+                    feedback.textContent = "Correto!";
+                    feedback.classList.remove('incorrect');
+                    feedback.classList.add('correct');
+                } else {
+                    feedback.textContent = "Errado, tente novamente.";
+                    feedback.classList.remove('correct');
+                    feedback.classList.add('incorrect');
+                }
+            });
+        });
+    </script>
+    
+</body>
+</html>
